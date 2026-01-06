@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nynbc Studio y Boutique</title>
+
+  <style>
+    :root {
+      --rosa: #e1306c;
+      --vino: #7a0b2e;
+      --whatsapp: #25d366;
+      --bg1: #fff0f5;
+      --bg2: #f8cdda;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+      color: var(--vino);
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(135deg, #f8b6c8, #f3a6b8);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.9em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 1.05em;
+    }
+
+    /* TARJETA PRINCIPAL */
+    .card {
+      max-width: 520px;
+      margin: 28px auto;
+      background: #ffffff;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+    }
+
+    /* CARRUSEL */
+    .carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.85);
+      border: none;
+      font-size: 26px;
+      padding: 8px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .prev { left: 12px; }
+    .next { right: 12px; }
+
+    /* CONTENIDO */
+    .content {
+      padding: 22px 20px 26px;
+      text-align: center;
+    }
+
+    .content h2 {
+      margin: 0 0 10px;
+      font-size: 1.4em;
+    }
+
+    .content p {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    /* BOTONES FLOTANTES */
+    .floating {
+      position: fixed;
+      bottom: 20px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 999;
+    }
+
+    .floating a {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+      transition: transform 0.2s ease;
+    }
+
+    .floating a:hover {
+      transform: scale(1.08);
+    }
+
+    .instagram {
+      background: var(--rosa);
+    }
+
+    .whatsapp {
+      background: var(--whatsapp);
+    }
+
+    .floating svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Nynbc Studio y Boutique</h1>
+  <p>Manos que hablan por ti</p>
+</header>
+
+<div class="card">
+
+  <div class="carousel">
+    <div class="carousel-track" id="track">
+      <img src="imagen1.jpg.jpeg" alt="Diseño de uñas 1">
+      <img src="imagen2.jpg.jpeg" alt="Diseño de uñas 2">
+      <img src="imagen3.jpg.jpeg" alt="Diseño de uñas 3">
+      <img src="imagen4.jpg.jpeg" alt="Diseño de uñas 4">
+      <img src="imagen5.jpg.jpeg" alt="Diseño de uñas 5">
+      <img src="imagen6.jpg.jpeg" alt="Diseño de uñas 6">
+      <img src="imagen7.jpg.jpeg" alt="Diseño de uñas 7">
+      <img src="imagen8.jpg.jpeg" alt="Diseño de uñas 8">
+      <img src="imagen9.jpg.jpeg" alt="Diseño de uñas 9">
+      <img src="imagen10.jpg.jpeg" alt="Diseño de uñas 10">
+    </div>
+
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+
+  <div class="content">
+    <h2>Estilo, detalle y elegancia</h2>
+    <p>
+      Diseños exclusivos, tendencias modernas y atención personalizada.
+      Tu estilo empieza en tus manos 💅✨
+    </p>
+  </div>
+
+</div>
+
+<!-- BOTONES FLOTANTES -->
+<div class="floating">
+  <a href="https://www.instagram.com/nynbcstudio_boutique" target="_blank" class="instagram" aria-label="Instagram">
+    <!-- ICONO INSTAGRAM -->
+    <svg viewBox="0 0 24 24">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm6.5-.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/>
+    </svg>
+  </a>
+
+  <a href="https://wa.me/50761903656" target="_blank" class="whatsapp" aria-label="WhatsApp">
+    <!-- ICONO WHATSAPP -->
+    <svg viewBox="0 0 24 24">
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 0 5.3 0 11.9c0 2.1.6 4.1 1.7 5.9L0 24l6.3-1.6a12 12 0 0 0 5.7 1.4h.1c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+  const track = document.getElementById("track");
+  const slides = track.children;
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
+
+  let index = 0;
+
+  function moveSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  next.onclick = () => {
+    index = (index + 1) % slides.length;
+    moveSlide();
+  };
+
+  prev.onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    moveSlide();
+  };
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    moveSlide();
+  }, 4000);
+</script>
+
+</body>
+</html>
